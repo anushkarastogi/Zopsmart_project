@@ -101,7 +101,7 @@ func createOneCourse(w http.ResponseWriter, r *http.Request) {
 }
 
 // update course
-func updateCourse(w http.ResponseWriter, r *http.Request) {
+func updateOneCourse(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Update course")
 	w.Header().Set("Content-type", "application/json")
 
@@ -121,4 +121,20 @@ func updateCourse(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+}
+
+// delete course
+func deleteOneCourse(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("Delete course")
+	w.Header().Set("Content-type", "application/json")
+	params := mux.Vars(r)
+
+	//loop through id , when get id then romove it using slices
+	for index, course := range courses {
+		if course.CourseId == params["id"] {
+			courses = append(courses[:index], courses[index+1:]...)
+			break
+		}
+
+	}
 }
