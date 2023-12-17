@@ -1,5 +1,4 @@
-Zopsmart Project using Go(Golang) and GoFr
+###Zopsmart Project using Go(Golang) and GoFr
 
-we are creating online courses like Udemy, Coursera, etc similar kinds of backend API
-where users get features of all the courses like creating new courses, reading, update
-and delete courses.
+This is LearnHub API which stores the data of online courses and users can perform CRUD Operations. <br>
+Implemented in Go with GoFr framework and MySQL<br>
